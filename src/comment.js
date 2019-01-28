@@ -7,19 +7,23 @@ export default class Comment extends React.Component {
         <a href="/" className="avatar">
           <img
             class="ui avatar image"
-            src="https://semantic-ui.com/images/avatar/small/jenny.jpg"
+            src={this.props.avatar}
           />
         </a>
         <div className="content">
           <a href="/" className="author">
-            Marcus
+            {this.props.author}
           </a>
           <div className="metadata">
-            <span className="date"> Today at 12.31</span>
+            <span className="date">{this.props.date}</span>
           </div>
-          <div className="text"> Nice Post!!</div>
+          <div className="text">{this.props.msg}</div>
         </div>
       </div>
     );
   }
 }
+// this.props.author
+// this.props.date
+// this.props.msg
+// "https://semantic-ui.com/images/avatar/small/jenny.jpg"
